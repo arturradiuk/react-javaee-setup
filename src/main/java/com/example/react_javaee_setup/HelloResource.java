@@ -10,14 +10,10 @@ public class HelloResource {
     @GET
     @Produces("text/plain")
     public Response hello() {
+
 //        return "Hello, World!";
         return Response.ok()
 //                .header("Access-Control-Allow-Origin", "http://localhost:3000/")
-                .header("Access-Control-Allow-Origin", "*")
-//                .header("Access-Control-Allow-Headers", "*")
-//                .header("Access-Control-Allow-Credentials", "true")
-//                .header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS,HEAD")
-//                .header("Access-Control-Max-Age", "1209600")
                 .entity("Hello, World!")
                 .build();
     }
